@@ -6,11 +6,11 @@
 
 > Использование команды с опцией **verbose**:
 >
->> ```shell
+>> ```
 >> curl -v rgups.ru
 >> ```
 > Результат исполнения:
->> ```shell
+>> ```
 >> * processing: rgups.ru
 >>   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 >>                                  Dload  Upload   Total   Spent    Left  Speed
@@ -40,3 +40,6 @@
 >>
 >> * Connection #0 to host rgups.ru left intact
 >> ```
+> В первой строке идет обработка запроса, в данном случае ```rgups.ru```.  
+> В последующих трёх строках идет информация о скорости загрузки, потраченном времени и т.п.  
+> 
