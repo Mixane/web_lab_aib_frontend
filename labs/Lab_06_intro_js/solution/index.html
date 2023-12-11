@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laba</title>
+  </head>
+  <body>
+    <script>
+      function t1() {
+        function random(length) {
+          let result = "";
+          const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+          const lettersLength = letters.length;
+          for (let i = 0; i < length; i++) {
+            result += letters.charAt(
+              Math.floor(Math.random() * lettersLength)
+            );
+          }
+          return result;
+        }
+        let apple = 10;
+        let condition = random(10);
+        alert(apple);
+        console.log(apple);
+        alert("Good game is " + condition);
+      }
+      function t2() {
+        let digit = 2;
+        let letter = "100";
+        let bool = true;
+        console.log(digit + letter + bool);
+        console.log(digit + bool + letter);
+        console.log(letter + digit + bool);
+        console.log(letter + bool + digit);
+        console.log(bool + letter + digit);
+        console.log(bool + digit + letter);
+      }
+      function t3() {
+        const length = 10;
+        const min = -10;
+        const max = 10;
+        let array = [length];
+        for (let i = 0; i < length; i++) {
+          array.push(Math.floor(Math.random() * 21) - 10);
+        }
+        var newArray = array.filter(function (element) {
+          return element > 0;
+        });
+        console.log(array);
+        console.log(newArray);
+      }
+      function t4() {
+        function getRandomNumber() {
+          return Math.floor(Math.random() * 21) - 10;
+        }
+        console.log(getRandomNumber());
+        function multiplyArrayByNumber(arr, number) {
+          let result = [];
+          for (let i = 0; i < arr.length; i++) {
+            result.push(arr[i] * number);
+          }
+          return result;
+        }
+        let array = [1, 2, 3, 4, 5];
+        let number = 2;
+        console.log(multiplyArrayByNumber(array, number));
+        let generateRandomWord = function () {
+          let word = "";
+          let characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+          let length = Math.floor(Math.random() * 10) + 1;
+          for (let i = 0; i < length; i++) {
+            let randomIndex = Math.floor(Math.random() * characters.length);
+            word += characters.charAt(randomIndex);
+          }
+          return word;
+        };
+        console.log(generateRandomWord());
+      }
+      function t5() {
+        let person = {};
+        person.firstName = "John";
+        person.surname = "Doe";
+        person.patronymic = "Smith";
+        person.birthday = "01/01/1990";
+        person.hobby = "reading";
+        person.group = "A";
+        person.getInfo = function () {
+          let fullName =
+            this.surname + " " + this.firstName + " " + this.patronymic;
+          let age =
+            new Date().getFullYear() - new Date(this.birthday).getFullYear();
+          return (
+            fullName +
+            ", " +
+            this.birthday +
+            ", " +
+            this.hobby +
+            ", " +
+            age +
+            " years old"
+          );
+        };
+        alert(person.getInfo());
+        let salaries = {
+          Smith: 50000,
+          Johnson: 60000,
+          Williams: 55000,
+          Jones: 65000,
+          Brown: 70000,
+          Davis: 45000,
+          Miller: 55000,
+          Wilson: 60000,
+          Moore: 50000,
+          Taylor: 55000,
+        };
+        let totalSalary = 0;
+        for (let key in salaries) {
+          totalSalary += salaries[key];
+        }
+        console.log(totalSalary);
+      }
+      t1();
+      t2();
+      t3();
+      t4();
+      t5();
+    </script>
+  </body>
+</html>
