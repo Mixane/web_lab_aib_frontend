@@ -1,3 +1,4 @@
+// Почему задания называются так? Это типа майнкрафт?)))
 // Задание 1. level stone
 
 let variable1 = prompt("var one");
@@ -35,7 +36,7 @@ for (let i = 0; i < fruits.length; i++) {
   }
 }
 
-// Задание 3
+// Задание 3 level gold
 
 let countPerson;
 do {
@@ -52,7 +53,7 @@ do {
 let finalCost = countPerson * salaryPerson;
 alert(`Затраты на ЗП: ${finalCost}`);
 
-// Задание 4
+// Задание 4 здесь не было level'а поэтому diamond
 
 let listOfStudent = [
   {
