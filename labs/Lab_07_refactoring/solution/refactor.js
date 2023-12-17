@@ -1,21 +1,18 @@
-// Задание 1
+// Задание 1. level stone
 
-let firstVariable = prompt("var one");
-let secondVariable = prompt("var two");
-
-if (firstVariable === secondVariable) {
-  console.log("equally")
+let variable1 = prompt("var one");
+let variable2 = prompt("var two");
+if (variable1 === variable2) {
+  console.log("equal")
 } else {
-  console.log("not equally");
+  console.log("not equal");
 }
+let variable3 = "world";
+let result = variable1 + variable2;
 
-let thirdVariable = "world";
-let resultVariable = firstVariable + thirdVariable;
-
-// Задание 2
+// Задание 2 level iron
 
 const fruits = ["apple", "strawberry", "blueberry", "raspberry", "lemon"];
-
 for (let i = 0; i < fruits.length; i++) {
   switch (i) {
     case 0:
@@ -41,14 +38,12 @@ for (let i = 0; i < fruits.length; i++) {
 // Задание 3
 
 let countPerson;
-
 do {
-  countPerson = prompt("Введите кол-во человек ","");
+  countPerson = prompt("Введите кол-во человек ", "");
   countPerson = parseFloat(countPerson);
 } while ( !isNaN(countPerson) );
 
 let salaryPerson;
-
 do {
   salaryPerson = prompt("Введите зарплату на человека ","");
   salaryPerson = parseFloat(salaryPerson);
