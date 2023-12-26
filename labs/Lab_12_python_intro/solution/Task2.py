@@ -1,14 +1,17 @@
-n = int(input())
-X = input().split()
-medians = []
-for i in range(n):
-    X[:i+1] = sorted(X[:i+1])
-    if (i + 1) % 2 == 1:
-        m = int(X[(i + 1) // 2])
-    else:
-        m = int(X[i // 2])
-    medians.append(m)
-sum = 0
-for m in medians:
-    sum += m
-print(sum)
+def median_sum(n, X):
+    medians = []
+    for i in range(1, n + 1):
+        subsequence = X[:i]
+        subsequence.sort()
+        length = len(subsequence)
+        if length % 2 == 1:
+            median = subsequence[length // 2]
+        else:
+            median = (subsequence[length // 2 - 1] + subsequence[length // 2]) / 2
+        medians.append(median)
+    median_sum = sum(medians)
+    return median_sum
+n = int(input("Введите n: "))
+X = list(map(int, input("Введите последовательность: ").split()))
+result = median_sum(n, X)
+print(result)
