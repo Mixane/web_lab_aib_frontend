@@ -20,5 +20,3 @@ if __name__ == '__main__':
 
     xls_writer = XlsAnalyticPaymentWriter(data)
     xls_writer.write_excel_report(output_file)
-
-    print(f"Report generated successfully. Output file: {output_file}")
