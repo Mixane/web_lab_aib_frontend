@@ -1,14 +1,12 @@
-function redColor() {
+function red() {
     var element = document.getElementById("main");
     element.style.backgroundColor = "#ff0000";
 }
-
-function greenColor() {
+function green() {
     var element = document.getElementById("main");
     element.style.backgroundColor = "#008000";
 }
-
-function blueColor() {
+function blue() {
     var element = document.getElementById("main");
     element.style.backgroundColor = "#1E90FF";
 }
