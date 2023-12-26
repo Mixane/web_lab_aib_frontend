@@ -3,8 +3,8 @@ import json
 import os
 from writer import XlsAnalyticPaymentWriter
 
-def load_data(file_path):
-    full_path = os.path.join(os.getcwd(), file_path)
+def load_data(full_path):
+    full_path = os.path.join(os.getcwd(), full_path)
     with open(full_path, 'r', encoding='utf-8') as file:
         data = json.load(file)
     return data
